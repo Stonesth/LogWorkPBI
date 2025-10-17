@@ -181,10 +181,10 @@ if tools.waitLoadingPageByXPATH2(delay_properties, '//*[@id="search-results-tabl
     total_sec = time_all_sec / timedelta_8_sec
     print(str(round(total_sec, 3)))
 
-    # Need to update the JIRA for the Story Points field
-    # /html/body/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[2]/div/div[2]/div[1]/div/div[2]/div/div/input
-    tools.waitLoadingPageByXPATH2(delay_properties, '/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[2]/div/div[2]/div[1]/div/div[2]/div/div/input')
-    story_points_field = tools.driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[2]/div/div[2]/div[1]/div/div[2]/div/div/input')
+    # Need to update the JIRA for the Actual Story Points field
+    # //*[@id="__bolt-Actual-Story-Points-input"]
+    tools.waitLoadingPageByXPATH2(delay_properties, '//*[@id="__bolt-Actual-Story-Points-input"]')
+    story_points_field = tools.driver.find_element(By.XPATH, '//*[@id="__bolt-Actual-Story-Points-input"]')
     story_points_field.click()
     time.sleep(1)
     # Clear the field
@@ -200,10 +200,10 @@ else :
     a.connectToAzureDevOpsInsim(a.boards, a.pbi, a.userInsim, a.userInsimPassword)
     total_sec = 0
 
-    # Need to update the PBI for the Story Points field
-    # /html/body/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[2]/div/div[2]/div[1]/div/div[2]/div/div/input
-    tools.waitLoadingPageByXPATH2(delay_properties, '/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[2]/div/div[2]/div[1]/div/div[2]/div/div/input')
-    story_points_field = tools.driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[2]/div/div[2]/div[1]/div/div[2]/div/div/input')
+    # Need to update the PBI for the Actual Story Points field
+    # //*[@id="__bolt-Actual-Story-Points-input"]
+    tools.waitLoadingPageByXPATH2(delay_properties, '//*[@id="__bolt-Actual-Story-Points-input"]')
+    story_points_field = tools.driver.find_element(By.XPATH, '//*[@id="__bolt-Actual-Story-Points-input"]')
     story_points_field.click()
     time.sleep(1)
     # Clear the field
