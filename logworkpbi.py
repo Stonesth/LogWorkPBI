@@ -182,9 +182,10 @@ if tools.waitLoadingPageByXPATH2(delay_properties, '//*[@id="search-results-tabl
     print(str(round(total_sec, 3)))
 
     # Need to update the JIRA for the Actual Story Points field
-    # //*[@id="__bolt-Actual-Story-Points-input"]
-    tools.waitLoadingPageByXPATH2(delay_properties, '//*[@id="__bolt-Actual-Story-Points-input"]')
-    story_points_field = tools.driver.find_element(By.XPATH, '//*[@id="__bolt-Actual-Story-Points-input"]')
+    # //*[@id="__bolt-Actual-Story-Points-input"] -- since the 15-04-2026
+    # //*[@id="__bolt-Actuals-input"]
+    tools.waitLoadingPageByXPATH2(delay_properties, '//*[@id="__bolt-Actuals-input"]')
+    story_points_field = tools.driver.find_element(By.XPATH, '//*[@id="__bolt-Actuals-input"]')
     story_points_field.click()
     time.sleep(1)
     # Clear the field
@@ -201,9 +202,10 @@ else :
     total_sec = 0
 
     # Need to update the PBI for the Actual Story Points field
-    # //*[@id="__bolt-Actual-Story-Points-input"]
-    tools.waitLoadingPageByXPATH2(delay_properties, '//*[@id="__bolt-Actual-Story-Points-input"]')
-    story_points_field = tools.driver.find_element(By.XPATH, '//*[@id="__bolt-Actual-Story-Points-input"]')
+    # //*[@id="__bolt-Actual-Story-Points-input"] -- since the 15-04-2026
+    # //*[@id="__bolt-Actuals-input"]
+    tools.waitLoadingPageByXPATH2(delay_properties, '//*[@id="__bolt-Actuals-input"]')
+    story_points_field = tools.driver.find_element(By.XPATH, '//*[@id="__bolt-Actuals-input"]')
     story_points_field.click()
     time.sleep(1)
     # Clear the field
