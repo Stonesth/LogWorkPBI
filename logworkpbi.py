@@ -22,7 +22,7 @@ a.save_path = tools.readProperty(propertiesFolder_path, 'logWorkPBI', 'save_path
 a.boards = tools.readProperty(propertiesFolder_path, 'logWorkPBI', 'boards=')
 a.pbi = tools.readProperty(propertiesFolder_path, 'logWorkPBI', 'pbi=')
 
-delay_properties = 10
+delay_properties = 20
 
 
 
